@@ -8,14 +8,35 @@ public class Game {
 
     public static void startScreen() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Oh, chosen one.\n");
+//        System.out.printf("Oh, chosen one.\n");
 //        Thread.sleep(2000);
 //        System.out.printf("This land has waited countless ages until a hero would appear...\n");
 //        Thread.sleep(2000);
-//        System.out.printf("What is your name, hero?\n");
-//        String userInput = sc.nextLine();
-//        System.out.printf("'%s', you say?\n", userInput);
-//        Thread.sleep(2000);
+        System.out.printf("What is your name, hero?\n");
+        String userInput = sc.nextLine();
+        System.out.printf("'%s', you say?\n", userInput);
+        Thread.sleep(2000);
+        System.out.println("Archer, Paladin");
+        String classChoice = sc.next();
+        int attackValue = 0;
+        int defenseValue = 0;
+        int agilityValue = 0;
+        if(classChoice.equalsIgnoreCase("archer")){
+            attackValue = 5;
+            defenseValue = 3;
+            agilityValue = 7;
+        } else if(classChoice.equalsIgnoreCase("paladin")){
+            attackValue = 7;
+            defenseValue = 5;
+            agilityValue = 3;
+        }
+        Player hero = new Player(attackValue, defenseValue, agilityValue, userInput);
+//        hero.setAttack();
+        ArrayList<Integer> stats = new ArrayList<>();
+        stats.add(attackValue);
+        stats.add(defenseValue);
+        stats.add(agilityValue);
+        System.out.println("Your class has these stats: " + stats);
 //        System.out.printf("Yes... you shall be our hero.\n");
 //        Thread.sleep(2000);
 //        System.out.println("Now go! Your adventure now begins!");
@@ -66,6 +87,7 @@ public class Game {
 
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
+//        Player hero = new Player();
 
         startScreen();
         GUI.displayScreen();
@@ -78,10 +100,15 @@ public class Game {
         GUI.HUD(10, 10, 5000);
         ArrayList<Object> enemyList = new ArrayList<>();
         enemyList.add(enemy1);
+        System.out.println("Enemy encounter");
         pressAnyKeyToContinue();
-        GUI.displayScreen();
-        Enemies enemy2 = new Enemies(1);
-        GUI.HUD(20, 20, 4950);
+//        do{
+//
+//        }(while hero.getHealth() > 0 || !escaped || enemy.getHealth() > 0);
+
+//        GUI.displayScreen();
+//        Enemies enemy2 = new Enemies(1);
+//        GUI.HUD(20, 20, 4950);
 
     }
 }
