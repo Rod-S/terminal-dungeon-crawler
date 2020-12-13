@@ -15,7 +15,7 @@ public class Enemies {
             System.out.format("                     ------   |                              __)\\             /(__                                | ------   %n");
             System.out.format("                     ------   |                             __)_ \\  (\\!~!/)  / _(__                               | ------   %n");
             System.out.format("                     ------   |                            __)_ `.\\  )d b(  /.' _(__                              | ------   %n");
-            System.out.format("                     ------   |                          ___)_ `. \\\\(  _  )// .' _(___                            | ------   %n");
+            System.out.format("                     ------   |                          ___)_ `. \\\\(  _  )/ .' _(___                             | ------   %n");
             System.out.format("                     ------   |                           )_  `. \\  ((q_p))  / .'  _(_                            | ------   %n");
             System.out.format("                     ------   |                           _)`.  \\  ,-)\\_/(-.  /  .'(_                             | ------   %n");
             System.out.format("                     ------   |                            _) ,-._/v/vvvvv\\v\\_,-. (_                              | ------   %n");
